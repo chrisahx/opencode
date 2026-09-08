@@ -2,8 +2,8 @@ FROM ghcr.io/anomalyco/opencode:latest
 
 USER root
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN apk add --no-cache \
+        bash \
         git \
         curl \
         wget \
@@ -11,11 +11,17 @@ RUN apt-get update && \
         zip \
         jq \
         ripgrep \
-        fd-find \
-        build-essential \
+        fd \
+        build-base \
         ca-certificates \
-        neovim \
-    && rm -rf /var/lib/apt/lists/*
+        icu-libs \
+        krb5-libs \
+        libgcc \
+        libssl3 \
+        libstdc++ \
+        tzdata \
+        zlib \
+        neovim
 
 # -------------------------
 # .NET SDKs
