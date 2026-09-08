@@ -1,7 +1,7 @@
 ---
 description: Explores the codebase to find relevant files, patterns, dependencies, and implementation details
 mode: subagent
-model: openai/gpt-5.6-sol
+model: openai/gpt-5.6-luna
 temperature: 0.1
 permission:
     edit: deny

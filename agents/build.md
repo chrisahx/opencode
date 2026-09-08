@@ -1,7 +1,7 @@
 ---
 description: Implements features, fixes bugs, and refactors code
 mode: primary
-model: openai/gpt-5.6-sol
+model: openai/gpt-5.6-terra
 temperature: 0.1
 permission:
     edit: allow
@@ -41,6 +41,7 @@ When finished, provide a concise summary of:
 * Tests or validation performed
 * Any remaining risks or follow-up work
 
-Subagents at your disposal:
+Subagents:
 
-* If you need to investigate anything about the codebase you can use the subagent: scoutfor doing the investigations.
+* scout: you should always delegate scouting tasks to the scout subagent for investigating things in the project.
+* review: you should always delegate a code review task to the review subagent, after you have done a build of some code. Unless you are told not to.
