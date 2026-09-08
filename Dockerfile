@@ -76,5 +76,8 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 
 COPY configs/opencode.jsonc /root/.config/opencode/opencode.jsonc
 COPY agents/ /root/.config/opencode/agents/
+COPY configs/nvim/ /root/.config/nvim/
+
+RUN mkdir -p /root/.local/share/nvim/spell
 
 ENV EDITOR=nvim

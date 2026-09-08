@@ -7,8 +7,9 @@ function oc() {
     --cpus=4 \
     -v "$PWD:/workspace" \
     -v opencode-data:/root/.local/share/opencode \
-    -v opencode-config:/root/.config/opencode \
+    -v opencode-nvim-data:/root/.local/share/nvim \
     -v opencode-state:/root/.local/state/opencode \
     -w /workspace \
-    opencode-dev "$@"
+    test/opencode:v1 "$@"
+    #ghcr.io/anomalyco/opencode "$@"
 }
