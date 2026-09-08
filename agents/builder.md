@@ -40,3 +40,7 @@ When finished, provide a concise summary of:
 * Any important implementation decisions
 * Tests or validation performed
 * Any remaining risks or follow-up work
+
+Subagents at your disposal:
+
+* If you need to investigate anything about the codebase you can use the subagent: scoutfor doing the investigations.

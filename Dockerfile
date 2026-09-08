@@ -74,4 +74,7 @@ RUN case "$TARGETARCH" in \
 
 ENV PATH="/usr/local/go/bin:${PATH}"
 
+COPY configs/opencode.jsonc /root/.config/opencode/opencode.jsonc
+COPY agents/ /root/.config/opencode/agents/
+
 ENV EDITOR=nvim
