@@ -99,6 +99,8 @@ RUN mkdir -p \
 # Global Pi configuration. The launcher mounts /root/.pi/agent as a volume,
 # so retain a seed outside that mount and restore it at container startup.
 COPY pi/config/settings.json /usr/local/share/pi/settings.json
+# Image-managed extensions are copied into the persistent Pi volume at startup.
+COPY pi/extensions/ /usr/local/share/pi/extensions/
 COPY pi/docker-entrypoint.sh /usr/local/bin/pi-entrypoint
 RUN chmod 755 /usr/local/bin/pi-entrypoint
 
